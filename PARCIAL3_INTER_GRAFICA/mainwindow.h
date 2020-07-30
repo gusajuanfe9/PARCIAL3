@@ -12,6 +12,7 @@
 #include <time.h>
 #include "parabolicas.h"
 #include "caidas.h"
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,6 +23,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    int xr;
     void keyPressEvent(QKeyEvent *event);
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
@@ -30,6 +32,8 @@ public:
 private slots:
     void crear_p();
     void crear_c();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

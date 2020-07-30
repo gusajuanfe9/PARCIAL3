@@ -2,9 +2,10 @@
 #define PARABOLICAS_H
 #include <QGraphicsItem>
 #include <QPainter>
-
-class parabolicas: public QGraphicsItem
+#include <QTimer>
+class parabolicas: public QObject, public QGraphicsItem
 {
+    Q_OBJECT
     int r;
 
 public:
